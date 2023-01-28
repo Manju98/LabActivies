@@ -16,12 +16,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class StudentDTO {
-	//@NotBlank(message="empty not allowed")
-	 //@NotNull(message="null value not allowed")
-	// @Size(min=3,max=15,message="name must be in range 3-15 characters")
+	@NotBlank(message="empty not allowed")
+	 @NotNull(message="null value not allowed")
+	 @Size(min=3,max=15,message="name must be in range 3-15 characters")
 	
 	 private String studentName;
-	//@Min(value=3,message="Invalid Age")
-    //@Max(value=100,message="Invalid Age")
+	@Min(value=3,message="Invalid Age")
+    @Max(value=100,message="Invalid Age")
     private Integer studentAge;
 }

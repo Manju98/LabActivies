@@ -1,6 +1,6 @@
 package com.librarymanagementsystem.Entity;
 
-import java.util.ArrayList;
+import java.util.ArrayList; 
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -9,6 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -22,13 +24,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name="Student_Table")
+@Table(name="Student")
 public class Student {
 @Id
 @GeneratedValue(strategy=GenerationType.AUTO)
 private int studentId;
 @Column(name="studentName")
 private String studentName;
-@Column(name="studentAge")
-private Integer studentAge;
+@Column(name="studentAddress")
+private String studentAddress;
+@Column(name=" studentAge")
+private String studentAge;
 }

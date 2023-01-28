@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,7 +23,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="book_Table")
+@Table(name="book")
 @Builder
 public class Book {
 @Id
@@ -36,8 +37,10 @@ private String bookPrice;
 private String bookAuthor;
 @Column(name="bookPublication")
 private String bookPublication;
+
 @ManyToOne(cascade=CascadeType.ALL)
 @JoinColumn(name="studentId")
 private Student student;
+
 
 }
