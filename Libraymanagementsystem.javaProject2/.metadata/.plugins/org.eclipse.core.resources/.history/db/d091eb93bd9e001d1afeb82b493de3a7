@@ -1,0 +1,5 @@
+package com.librarymanagementsystem.configuration;
+
+public @interface EnableSwagger2 {
+
+}

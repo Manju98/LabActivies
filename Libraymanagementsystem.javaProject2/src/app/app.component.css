@@ -1,0 +1,9 @@
+body{
+    background-image: url("o.jpg");
+    height: fit-content;
+}
+h2{
+     font-family: 'Times New Roman';
+     font-weight: bold;
+     color: burlywood;
+}
